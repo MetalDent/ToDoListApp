@@ -15,6 +15,7 @@
         app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light" >
         <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -67,38 +68,38 @@
         android:layout_centerInParent="true"
         android:layout_centerHorizontal="true"
         android:gravity="center">
-        <EditText
-            android:id="@+id/task_name"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_centerVertical="true"
-            android:layout_gravity="center"
-            android:hint="Task"
-            android:background="@android:color/white"
-            android:padding="12dp"
-            android:ems="10"
-            android:singleLine="true"
-            android:textColorHint="#CCCCCC"
-            android:textColor="#666666"/>
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="#D2D2D2"/>
-        <EditText
-            android:id="@+id/task_date"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_centerVertical="true"
-            android:layout_gravity="center"
-            android:hint="Task Date"
-            android:padding="12dp"
-            android:focusable="false"
-            android:background="@android:color/white"
-            android:ems="10"
-            android:singleLine="true"
-            android:textColorHint="#CCCCCC"
-            android:textColor="#666666"
-            android:onClick="showStartDatePicker"/>
+            <EditText
+                android:id="@+id/task_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:hint="Task"
+                android:background="@android:color/white"
+                android:padding="12dp"
+                android:ems="10"
+                android:singleLine="true"
+                android:textColorHint="#CCCCCC"
+                android:textColor="#666666"/>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#D2D2D2"/>
+                <EditText
+                    android:id="@+id/task_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:hint="Task Date"
+                    android:padding="12dp"
+                    android:focusable="false"
+                    android:background="@android:color/white"
+                    android:ems="10"
+                    android:singleLine="true"
+                    android:textColorHint="#CCCCCC"
+                    android:textColor="#666666"
+                    android:onClick="showStartDatePicker"/>
 
     </LinearLayout>
 
