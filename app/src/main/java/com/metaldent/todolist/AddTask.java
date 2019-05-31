@@ -5,7 +5,6 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -55,9 +54,9 @@ public class AddTask extends AppCompatActivity implements DatePickerDialog.OnDat
 
     public void init_update() {
         id = intent.getStringExtra("id");
-        TextView toolbar_task_add_title = (TextView) findViewById(R.id.toolbar_task_add_title);
-        EditText task_name = (EditText) findViewById(R.id.task_name);
-        EditText task_date = (EditText) findViewById(R.id.task_date);
+        TextView toolbar_task_add_title = findViewById(R.id.toolbar_task_add_title);
+        EditText task_name = findViewById(R.id.task_name);
+        EditText task_date = findViewById(R.id.task_date);
         toolbar_task_add_title.setText("Update");
         Cursor task = mydb.getDataSpecific(id);
         if (task != null) {
@@ -90,13 +89,13 @@ public class AddTask extends AppCompatActivity implements DatePickerDialog.OnDat
 
     public void doneAddTask(View v) {
         int errorStep = 0;
-        EditText task_name = (EditText) findViewById(R.id.task_name);
-        EditText task_date = (EditText) findViewById(R.id.task_date);
+        EditText task_name = findViewById(R.id.task_name);
+        EditText task_date = findViewById(R.id.task_date);
         nameFinal = task_name.getText().toString();
         dateFinal = task_date.getText().toString();
 
 
-        /* Checking */
+  /* Checking */
         if (nameFinal.trim().length() < 1) {
             errorStep++;
             task_name.setError("Provide a task name.");
@@ -141,7 +140,7 @@ public class AddTask extends AppCompatActivity implements DatePickerDialog.OnDat
         String date = (startDay < 10 ? "0" + startDay : "" + startDay) + "/" +
                 (monthAddOne < 10 ? "0" + monthAddOne : "" + monthAddOne) + "/" +
                 startYear;
-        EditText task_date = (EditText) findViewById(R.id.task_date);
+        EditText task_date = findViewById(R.id.task_date);
         task_date.setText(date);
     }
 

@@ -59,7 +59,7 @@ public class ListTaskAdapter extends BaseAdapter {
             holder.task_image.setText(Html.fromHtml("&#11044;"));
             /* Image */
 
-        }catch(Exception e) {}
+            }catch(Exception e) {}
         return convertView;
     }
 }

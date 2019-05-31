@@ -45,7 +45,7 @@ public class TaskDBHelper extends SQLiteOpenHelper {
                 "dd/MM/yyyy", Locale.getDefault());
         Date date = new Date();
         try {
-            date = dateFormat.parse(day);
+        date = dateFormat.parse(day);
         } catch (ParseException e) {}
         return date.getTime();
     }
@@ -116,6 +116,7 @@ public class TaskDBHelper extends SQLiteOpenHelper {
         return res;
 
     }
+
 
 
 }

@@ -40,15 +40,15 @@ public class TaskHome extends AppCompatActivity {
 
         activity = TaskHome.this;
         mydb = new TaskDBHelper(activity);
-        scrollView = (NestedScrollView) findViewById(R.id.scrollView);
-        loader = (ProgressBar) findViewById(R.id.loader);
-        taskListToday = (NoScrollListView) findViewById(R.id.taskListToday);
-        taskListTomorrow = (NoScrollListView) findViewById(R.id.taskListTomorrow);
-        taskListUpcoming = (NoScrollListView) findViewById(R.id.taskListUpcoming);
+        scrollView = findViewById(R.id.scrollView);
+        loader = findViewById(R.id.loader);
+        taskListToday = findViewById(R.id.taskListToday);
+        taskListTomorrow = findViewById(R.id.taskListTomorrow);
+        taskListUpcoming = findViewById(R.id.taskListUpcoming);
 
-        todayText = (TextView) findViewById(R.id.todayText);
-        tomorrowText = (TextView) findViewById(R.id.tomorrowText);
-        upcomingText = (TextView) findViewById(R.id.upcomingText);
+        todayText = findViewById(R.id.todayText);
+        tomorrowText = findViewById(R.id.tomorrowText);
+        upcomingText = findViewById(R.id.upcomingText);
 
     }
 
